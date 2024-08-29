@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Augmented Assignment</title>
+  </head>
+  <body>
+    <script>
+      // Operator Augmented Assignment (Penyederhaan Proses Aritmatika)
+      // result = result + 10 -> result +=10
+      // result = result - 10 -> result -=10
+      // result = result * 10 -> result *=10
+      // result = result ** 10 -> result **=10
+      // result = result / 10 -> result /=10
+      // result = result % 10 -> result %=10
+
+      // Tambah
+      let result = 1 + 2; // 3
+      document.writeln("<p> 1 + 2 = " + result + "</p");
+
+      // Pangkat
+      result **= 2; // 3^2 = 9
+      document.writeln("<p> 3^2 = " + result + "</p");
+
+      // Bagi
+      result /= 3; // 3
+      document.writeln("<p> 9 / 3 = " + result + "</p");
+
+      // Sisa Bagi
+      result %= 2; // 3 % 2 = 1
+      document.writeln("<p> 3 % 2 = " + result + "</p");
+    </script>
+  </body>
+</html>
