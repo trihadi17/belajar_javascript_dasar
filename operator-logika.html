@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Logika</title>
+  </head>
+  <body>
+    <script>
+      // Operator Logika -> operator untuk 2 buah data boolean, hasil dari logika itu adalah boolean lagi
+
+      // && (AND) -> Dan
+      // true && true = true
+      // true && false = false
+      // false && true = false
+      // false && false = false
+
+      // || (OR) -> Atau
+      // true && true = true
+      // true && false = true
+      // false && true = true
+      // false && false = false
+
+      // ! -> Kebalikan
+      // !true = false
+      // !false = true
+
+      const nilaiUjian = 90;
+      const nilaiAbsensi = 75;
+
+      const lulusUjian = nilaiUjian > 75;
+      document.writeln("<p>" + lulusUjian + "</p>");
+
+      const lulusAbsensi = nilaiAbsensi > 75;
+      document.writeln("<p>" + lulusAbsensi + "</p>");
+
+      const lulus = lulusUjian && lulusAbsensi;
+      document.writeln("<p>" + lulus + "</p>");
+    </script>
+  </body>
+</html>
