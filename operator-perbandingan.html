@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Perbandingan</title>
+  </head>
+  <body>
+    <script>
+      // Operator Perbandingan -> Operasi membandingkan dua buah data yang menghasilkan true/false
+      // > -> lebih dari
+      // < -> kurang dari
+      // >= -> lebih dari sama dengan
+      // <= -> kurang dari sama dengan
+      // == -> sama dengan
+      // === (sama dengan 3 kali) -> sama dengan dan sama tipe
+      // != -> tidak sama dengan
+      // !== (sama dengan 2 kali) -> tidak sama dengan dan tidak sama tipe
+
+      let result = 5 == "5"; // true, karena ini hanya membandingkan hasil tanpa mengecek tipe data
+      document.writeln("<p>" + result + "</p>");
+
+      result = 5 === "5"; // false, karena ini hanya membandingkan hasil dan tipe data
+      document.writeln("<p>" + result + "</p>");
+
+      result = 5 >= "10"; // false
+      document.writeln("<p>" + result + "</p>");
+
+      result = 5 < 10; // true
+      document.writeln("<p>" + result + "</p>");
+    </script>
+  </body>
+</html>
