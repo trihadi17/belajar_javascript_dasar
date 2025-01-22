@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipe Data Array</title>
+  </head>
+  <body>
+    <script>
+      // ARRAY -> Tipe data yang berisikan kumpulan data
+      // Array di Javascript memiliki sifat dinamis, artinya datanya bisa bertambah dengan sendirinya saat kita memasukkan data kedalam Array
+
+      let arrayKosong = [];
+
+      let arrayData = ["Tri", "Hadi", "Putra"];
+      //   let arrayData = ["Tri", "Hadi", "Putra", 1, true, 1.1]; // bisa semua tipe data
+
+      // CARA KERJA ARRAY
+      // Setiap data di Array akan disimpan dalam posisi berurutan, dimana urutan pertama dimulai dari nomor 0
+      // Setiap kita menambha data ke Array, otomatis data akan disimpan di urutan terakhir
+      // Urutan di Arra, kita sebut dengan "Index"
+
+      // OPERASI DI ARRAY
+      // array.push(value) -> Menambah data ke Array
+      // array.length -> Untuk mendapatkan panjang Array
+      // array[index] -> Mendapat data di posisi Index
+      // array[index] = value -> Mengubah data di posisi Index
+      // delete array[index] -> Menghapus data di posisi Index, namun index tidak bergeser, Cth : Hapus index ke 0, maka index ke 1 tidak menjadi index 0, dia tetap dengan posisinya
+
+      const names = [];
+
+      // TAMBAH
+      // NOTED : KITA BISA MENAMBAH ARRAY DIDALAM ARRAY
+      names.push("Tri");
+      names.push("Hadi", "Putra", 1);
+      console.table(names);
+
+      names.push(arrayData);
+      console.table(names);
+
+      // LENGTH
+      console.info(names.length);
+
+      // MENDAPATKAN ARRAY INDEX
+      console.info(names[1]);
+
+      // MENGUBAH DATA INDEX
+      names[1] = "YAU";
+      console.table(names);
+
+      // DELETE INDEX
+      delete names[1];
+      console.table(names);
+    </script>
+  </body>
+</html>

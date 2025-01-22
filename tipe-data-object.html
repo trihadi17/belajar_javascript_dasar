@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipe Data Object</title>
+  </head>
+  <body>
+    <script>
+      // ASSOCIATIVE ARRAY
+      // Associative Array -> Membuat index menggunakan tipe data lain selain Number, Cth: String, dll
+      // Di bahasa pemrograman lain seperti PHP, kita bisa menggunakan Index berupa tipe data lain selain Number, misalnya String
+      /* 
+            Di JavaScript associative array tidak di dukung, jika memaksa memasukkan data bukan number di Index Array,
+            maka JavaScript akan merubah tipe data Array tersebut menjadi Object (Object beda dengan Array) dan ini bisa berbahaya
+            karena beberap operasi di Array mungkin bisa berubah hasilnya
+    */
+
+      // TIPE DATA OBJECT ( {} )
+      // Tipe data object adalah tipe data yang mirip dengan tipe data Array
+      // Yang Membedakan adalah index pada tipe data Object bisa menggunakan String
+      // Index di Object biasanya disebut "Attributes" atau "Properties", bukan Index
+      // Jika Array itu menggunakan kurung siku [], maka Object kurung kurawal {}
+      // Operasi di Object sama dengan Array, hanya saja bedanya Index nya bisa selain tipe data Number
+
+      const orang = {
+        nama: "Trihadi Putra",
+        alamat: "Indonesia",
+        umur: 26,
+      };
+
+      // TAMBAH OBJECT
+      orang["jenis_kelamin"] = "Laki-Laki";
+      console.table(orang);
+
+      orang.asa = "haha";
+
+      // UBAH OBJECT
+      orang["jenis_kelamin"] = "Perempuan";
+      console.table(orang);
+
+      // MENDAPATKAN INDEX
+      console.info(`Nama : ${orang["nama"]}`); // cara 1
+      console.info(`Alamat : ${orang.alamat}`); // cara 2
+      console.info(`Umur : ${orang.umur}`);
+
+      // DELETE INDEX
+      //   delete orang.asa; // cara 1
+      delete orang["asa"]; // cara 2
+
+      console.table(orang);
+    </script>
+  </body>
+</html>

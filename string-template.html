@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Template</title>
+  </head>
+  <body>
+    <script>
+      // String Template adalah fitur ES6 yang memungkinkan kita untuk membuat string dengan lebih mudah
+      // String Template menggunakan backtick (`) bukan single quote (') atau double quote (")
+      // String Template menggunakan ${} untuk menampilkan variabel atau ekspresi
+
+      // deklarasi variabel
+      const firstName = "Tri";
+      const middleName = "Hadi";
+      const lastName = "Putra";
+      const stringTemplate = `Hello ${firstName} ${middleName} ${lastName}`;
+
+      const versiManual =
+        "Hello " + firstName + " " + middleName + " " + lastName;
+
+      // String Template
+      console.log(stringTemplate); // Hello Tri Hadi
+
+      // Expression String Template (kita bisa memasukkan expression di dalam ${})
+      const nilai = 70;
+      const nilaiHuruf = `Nilai anda adalah ${nilai >= 80 ? "A" : "B"}`;
+      console.log(nilaiHuruf); // Nilai anda adalah A
+
+      // Multiline String Template -> kita bisa membuat string dengan multiline (banyak baris) dengan cara enter
+      const multilineString = `Nama saya adalah trihadi putra
+hello world
+hahaha
+babab
+      `;
+      //   console.log(multilineString);
+      document.writeln("<pre>");
+      document.writeln(`ahah ${multilineString}`);
+      document.writeln("</pre>");
+    </script>
+  </body>
+</html>

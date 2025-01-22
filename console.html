@@ -9,15 +9,26 @@
     <script>
       // Console adalah fitur dari js untuk melakukan logging
       // logging ini adalah mekanisme menampilkan informasi tanpa harus mengganggu alur kerja aplikasi
-      // Jenis console -> console.info, console.warn, console.error, console.table
+      // Jenis console -> console.debug, console.info, console.warn, console.error, console.table
+      // urutan console -> debug -> info -> warn -> errorg
+
+      // console.debug -> menampilkan informasi debug (pada console browser defaultnya tidak keluar, jika ingin menampilkan harus diaktifkan terlebih dahulu dengan cara pilih di all levels yaitu Verbose)gm
+      console.debug("Ini adalah informasi debug");
 
       // console.info == console.log -> menampilkan/memberitahu informasi
+      console.info("Ini adalah informasi");
 
       // console.warn -> menampilkan informasi peringatan
+      console.warn("Ini adalah informasi peringatan");
 
       // console.error -> menampilkan informasi error
+      console.error("Ini adalah informasi error");
 
       // console.table -> menampilkan informasi dalam bentuk table (array)
+      console.table([
+        { name: "John", age: 20 },
+        { name: "Doe", age: 30 },
+      ]);
     </script>
   </body>
 </html>

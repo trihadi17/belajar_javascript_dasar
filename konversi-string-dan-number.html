@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konversi String dan Number</title>
+  </head>
+  <body>
+    <script>
+      // Saat membuat aplikasi, kadang kita input dari pengguna selalu dalam bentuk String
+      // Sedangkan kita ingin mengelola datanya dalam bentuk Number
+      // Sangat disarankan untuk melakukan konversi data, jika hasil yang kita inginkan selain dalam bentuk String
+
+      // CONTOH
+      const value1 = "1"; // bentuk string
+      const value2 = 1; // bentuk number
+      const sum = value1 + value2; // hasilnya adalah 11, karena value1 bernilai string, jadi value2 akan dibaca sebagai String juga, maka harus dipastikan semua value dalam bentuk Number
+
+      document.writeln(`<p> ${sum} </p>`);
+
+      // Konversi String ke Number
+      // parseInt(string) -> Mengkonversi dari String ke Number (bilangan bulat), tidak membulatkan keatas atau kebawah, dia hanya mengambil angka didepan koma saja
+      // parseFloat(string) -> Mengkonversi dari String ke Number (bilangan pecahan)
+      // Number(string) -> Mengkonversi dari String ke Number (bulat/pecahan)
+
+      document.writeln(`<p> ${parseInt("1.9")} </p>`); // tidak membulatkan ke atas (menjadi 2), mengambil angka didepan koma saja
+      document.writeln(`<p> ${parseFloat("1.1")} </p>`);
+      document.writeln(`<p> ${Number("1.1")} </p>`);
+
+      // Konversi Number ke String
+      // variable.toString() -> Mengkonversi dari Number ke String
+
+      const a = 1;
+      const b = 1;
+      const total = a.toString() + b.toString(); // 11
+      document.writeln(`<p> ${total} </p>`);
+
+      // NaN (NOT A NUMBER) adalah Number spesial yang menyebuatkan bahwa value yang dikonversi bukanlah sebuah Number misal huruf "A"
+      // Jika data String yang kita lakukan konversi bukan data valid, maka hasil dari konversi tersebut adalah NaN
+      // Jika NaN dioperasikan dengan data Number lainnya, maka hasilnya akan menjadi NaN lagi
+
+      document.writeln(`<p> ${parseInt("salah")} </p>`); // NaN
+      document.writeln(`<p> ${parseInt("1salah")} </p>`); // 1, karena dia mentolerir kesalahan dibelakang, maka akan mengambil nilai depan saja
+
+      document.writeln(`<p> ${parseFloat("asd1.1")} </p>`); // NaN
+      document.writeln(`<p> ${parseFloat("1.2sdada")} </p>`); // 1.2, karena dia mentolerir kesalahan dibelakang, maka akan mengambil nilai depan saja
+
+      document.writeln(`<p> ${Number("1.1ups")} </p>`); // NaN, khusus Number() dia tidak mentolerir kesalahan, akan selalu menghasilkan NaN jika value tidak valid/tidak Number
+      document.writeln(`<p> ${Number("AA1.1")} </p>`); // NaN, khusus Number() dia tidak mentolerir kesalahan, akan selalu menghasilkan NaN jika value tidak valid/tidak Number
+      document.writeln(`<p> ${Number("Naa")} </p>`); // NaN, khusus Number() dia tidak mentolerir kesalahan, akan selalu menghasilkan NaN jika value tidak valid/tidak Number
+
+      const first = Number("salah"); // NaN
+      const totalNumber = first + 100; // NaN + Number
+      document.writeln(`<p> ${totalNumber} </p>`); // NaN, tetap menjadi NaN
+
+      // PENGECEKAN NaN
+      // isNaN() adalah function untuk mengecek value apakah NaN atau tidak
+      // Hasil ini berupa true dan false
+
+      document.writeln(`<p> ${isNaN(first)} </p>`);
+      document.writeln(`<p> ${isNaN(100)} </p>`);
+      document.writeln(`<p> ${isNaN(NaN)} </p>`);
+    </script>
+  </body>
+</html>
