@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nullish Coalescing Operator</title>
+  </head>
+  <body>
+    <script>
+      // NULLISH COALESCING OPERATOR (PENERAPAN DEFAULT VALUE)
+      // Nullish value adalah null dan undefined (nilai tersebut kosong/belum di deklarasikan)
+      // Nullish coalescing operator ditandangn dengan "??" yang dimana operator ini mirip dengan ternary operator
+      // Bedanya dengan ternary adalah pada kondisi, ketika suatu value bernilai null/undefined, maka default value nya yang akan diambil
+
+      let parameter;
+
+      let data = parameter ?? "Nilai default"; // Nilai default
+
+      document.writeln(`<p>${data}</p>`);
+    </script>
+  </body>
+</html>

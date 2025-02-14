@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undefined</title>
+  </head>
+  <body>
+    <script>
+      // UNDEFINED
+      // adalah sebuah kata kunci di JavaScript
+      // undefined juga disebut juga sebagai sebuah tipe data
+      // Pada intinya adalah, sebuah Variable/data yang belum ditambahkan nilainya maka disebut sebagai Undefined
+      // Undefined berbeda dengan Null pada bahasa pemrograman lain
+      // PERBEDAAN NYA ADALAH UNDEFINED SEBUAH VARIABLE/DATA YANG BELUM DIDEFINISIKAN SEDANGKAN NULL DATANYA SUDAH DIDEFENISIKAN SEBELUMNYA NAMUN DATA/VALUE NYA KOSONG
+
+      // UNDEFINED PADA VARIABLE
+      let name; // undefined
+      //   let name = "a"; // defined
+      //   let name = undefined; // undefined juga
+
+      // Cek apakah Variable telah memiliki nilai/belum
+      if (name === undefined) {
+        console.log("UNDEFINED");
+      } else {
+        console.log("DEFINED");
+      }
+
+      // UNDEFINED ARRAY
+      let names = ["Tri", "Hadi"]; // Index 0-1
+      // Cek apakah Index yang di lihat sudah ada nilai/belum
+      if (names[2] === undefined) {
+        console.log("ARRAY UNDEFINED");
+      } else {
+        console.log("ARRAY DEFINED");
+      }
+
+      // UNDEFINED OBJECT
+      let person = {
+        name: "Trihadi",
+      };
+      // Cek apakah Index pada Object yang di lihat sudah ada nilai/belum
+      if (person.address === undefined) {
+        console.log("OBJECT UNDEFINED");
+      } else {
+        console.log("OBJECT DEFINED");
+      }
+    </script>
+  </body>
+</html>
