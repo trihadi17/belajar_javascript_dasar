@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Break & Continue</title>
+  </head>
+  <body>
+    <script>
+      // BREAK
+      // Pada switch statement, break digunakan untuk menghentikan case dalam switch
+      // Pada perulangan, break juga dapat digunakan untuk menghentikan seluruh perulangan
+
+      let counter = 1;
+
+      // membuat perulangan dengan kondisi selalu true, lalu membuat break untuk menghentikan perulangan yang bernilai true menggunakan if statement
+      while (true) {
+        document.writeln(`<p>Perulangan ke ${counter}</p>`);
+        counter++;
+
+        // untuk menghentikan perulangan dengan break
+        if (counter > 10) {
+          break;
+        }
+      }
+
+      // CONTINUE
+      // CONTINUE digunakan untuk menghentikan perulangan saat ini, lalu melanjutkan ke perulangan selanjutnya
+
+      // menampilkan bilangan ganjil, apabila bilangan genap akan di continue (di skip)
+      for (let i = 1; i <= 100; i++) {
+        // jika bilangan genap di continue (dilanjutkan ke perulangan berikutnya tanpa mengabaikan post statement)
+        if (i % 2 === 0) {
+          continue;
+        }
+        document.writeln(`<p>Perulangan ganjil ${i}</p>`);
+      }
+    </script>
+  </body>
+</html>
