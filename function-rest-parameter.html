@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Rest Parameter</title>
+  </head>
+  <body>
+    <script>
+      // FUNCTION REST PARAMETER
+      // Rest parameter adalah fitur dimana kita bisa mengirim data sebanyak-banyak nya pada satu parameter dan secara otomatis akan dikonversi menjadi Array
+      // Untuk membuat rest parameter, ada ketentuan nya
+      // Rest parameter hanya boleh ada satu di function, tidak boleh lebih dari satu
+      // Rest paramter hanya boleh berada di posisi akhir, tidak boleh didepan/ditengah kecuali memang cuma 1 parameter
+      // Di bahasa pemrograman lain, ada juga yang bilang ini adalah variable argument
+      // ...data -> contoh rest parameter, berbentuk Array. Syarat harus ada titik tiga kali diikuti nama parameter (...data)
+
+      function sum(name, ...data) {
+        // ...data (rest paramter, semua nilai otomatis akan dijadikan dalam bentuk array)
+        let total = 0;
+        for (const item of data) {
+          total += item;
+        }
+
+        document.writeln(`<p>Total ${name} is ${total}</p>`);
+      }
+
+      // Panggil
+      sum("Orange", 1, 2, 3, 4, 5, 6, 7); // Orange dan 28
+      sum("Orange", 1, 2, 3, 4, 5, 6, 7, "aa"); // Orange dan 28aa
+      sum("Orange", 1, 2, 3, 4, 5, 6, 7, "aa", false); // Orange dan 28aafalse
+      sum("Orange", "aa", false, 1, 2, 3, 4, 5, 6, 7); // aafalse1234567 dan Orange
+      sum("Orange", false, "aa", 1, 2, 3, 4, 5, 6, 7); // 0aa1234567 dan Orange
+
+      // NOTED : Jika memasukkan data di rest parameter tipe nilai data yang berbeda dia akan tetap menampilkan dan menggabungkan nya, disarankan satu bentuk tipe data saja
+
+      // SPREAD SYNTAX
+      // Kadang kita terlanjur memiliki data berupa Array
+      // Tapi untungnya kita juga bisa mengirim Array ke Rest Parameter
+      // Kita bisa gunakan ...(titik tiga kali) diikuti dengan Arraynya ketika memanggil function
+      // fitur ini dinamakan Spread Syntax
+
+      const values = [10, 10, 10, 10];
+      sum("Banana", values); // Ini cara yang salah, dia tidak dikonversi -> (010,10,10,10)
+      sum("Banana", ...values); // Ini cara penerapan data Array ke Rest Parameter -> (40)
+    </script>
+  </body>
+</html>

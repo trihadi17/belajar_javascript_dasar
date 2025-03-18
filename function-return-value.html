@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Return Value</title>
+  </head>
+  <body>
+    <script>
+      // FUNCTION RETURN VALUE
+      // Function return value adalah blok kode program yang mengembalikan sebuah value
+      // Gunakan kata kunci "return"
+      // function ini hanya bisa mengembalikan satu data, jika ingin lebih dari satu data gunakan "Array"
+
+      // NOTED : Dengan kata kunci return, maka kode setelah return tersebut tidak akan dieksekusi
+
+      // Function dengan parameter + return value
+      function sayHello(firstName, lastName) {
+        const say = `Hello ${firstName} ${lastName}`;
+
+        return say;
+      }
+
+      // Memanggil function dan menangkap value/nilai dari function yang dipanggil
+      const result = sayHello("Trihadi", "Putra");
+      document.writeln(`<p>${result}</p>`);
+
+      // Function Return Value Lebih dari Satu (Misal : Pengkondisian)
+      function getFinalValue(value) {
+        if (value > 90) {
+          return "A";
+        } else if (value > 80) {
+          return "B";
+        } else if (value > 70) {
+          return "C";
+        } else if (value > 60) {
+          return "D";
+        } else {
+          return "E";
+        }
+      }
+
+      const finalValue = getFinalValue(70);
+      document.writeln(`<p>${finalValue}</p>`);
+    </script>
+  </body>
+</html>

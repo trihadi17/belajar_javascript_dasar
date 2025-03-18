@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Sebagai Value</title>
+  </head>
+  <body>
+    <script>
+      // FUNCTION SEBAGAI VALUE
+      // Function tidak hanya bisa digunakan sebagai kode program yang dieksekusi, tapi bisa juga sebagai value
+      // Artinya, function bisa disimpan di variable, bisa juga dikirim melalui paramater ke function lainnya
+
+      // FUNCTION DI VARIABLE (Bisa menyimpan function di variable)
+      function sayHello(name) {
+        document.writeln(`<p>Hello ${name}</p>`);
+      }
+
+      // Bisa disimpan pada variable
+      let say = sayHello; // tanpa tutup buka kurung
+
+      sayHello("Tri");
+      say("Hadi"); // Ini menampilkan pada variable, nantinya bisa digunakan sebagai parameter lain pada function lainnya dan bisa olah kembali
+
+      // FUNCTION DI PARAMETER (bisa menggunakan function lain sebagai parameter di function lainnya)
+      function giveMeName(callback) {
+        callback("Eko"); // sama halnya kek return, menetapkan sebuah nilai di function -> sayHello("Eko")
+      }
+
+      giveMeName(sayHello);
+      giveMeName(say);
+    </script>
+  </body>
+</html>

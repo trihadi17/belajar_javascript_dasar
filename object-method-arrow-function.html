@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Method Arrow Function</title>
+  </head>
+  <body>
+    <script>
+      // Arrow Function di Object Method
+      // Arrow function bisa kita gunakan sebagai Object Method
+      // Namun perlu diketahui, arrow function tidak bisa digunakan untuk mengakses arguments object, function generator, kata kunci "this" dan kata kunci "super"
+
+      const person = {
+        name: "Hadi",
+
+        // arrow function tidak bisa menggunakan kata kunci this
+        sayHello: (value) => {
+          // this == Window
+          console.info(this);
+          console.info(`Hello ${value} My Name is ${this.name}`); //this.name -> tidak bisa diakses, akan menampilkan data kosong
+        },
+      };
+
+      person.sayHello("Ari");
+    </script>
+  </body>
+</html>

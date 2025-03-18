@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Default Parameter</title>
+  </head>
+  <body>
+    <script>
+      // FUNCTION DEFAULT PARAMETER
+      // Parameter juga bisa kita beri default value, artinya jika ketika kita tida mengirim data ke parameter atau mengirim data undefined, maka secara otomatis paramater akan diisi oleh default value
+
+      function register(name, gender = "UNKNOWN") {
+        console.info(name);
+        console.info(gender);
+      }
+
+      // Panggil
+      register(); // undefined, unknown
+      register("Hadi"); // Hadi, unknown
+      register("Hadi", "MALE"); // Hadi, MALE
+      register("Hadi", undefined); // Hadi, unknown
+      register("Hadi", null); // Hadi, null (null muncul karna dia dianggap ada namun data/value nya kosong)
+    </script>
+  </body>
+</html>

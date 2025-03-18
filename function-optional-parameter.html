@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Optional Parameter</title>
+  </head>
+  <body>
+    <script>
+      // OPTIONAL PARAMETER
+      // Secara default, parameter di function itu optional (tidak wajib)
+      // Jika tidak ada value yang kita kirim ke parameter ketika memanggil function, maka secara otomatis value pada parameter tersebut bernilai "undefined"
+      // NOTED : Pada saat memanggil function, apabila kita memasukkan value parameter lebih dari yang kita buat, maka tidak terjadi error/komplain dari js, tapi ini sangat tidak dianjurkan
+
+      function sayHello(firstName, middleName, lastName) {
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
+
+      // Panggil
+      sayHello();
+      sayHello("Tri");
+      sayHello("Tri", "Hadi");
+      sayHello("Tri", "Hadi", "Putra");
+      sayHello("Tri", "Hadi", "Putra", "Budi"); // Budi tidak keluar, tapi tidak error (tidak dianjurkan)
+    </script>
+  </body>
+</html>

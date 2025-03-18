@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Arrow</title>
+  </head>
+  <body>
+    <script>
+      // FUNCTION ARROW
+      // Arrow function adalah alternatif pembuatan function yang lebih sederhana dari function biasanya (Ada di ES6), mirip seperti anonymous function (tidak bisa berdiri sendiri)
+      // Namun terdapat limitasi dan juga tidak bisa digunakan di semua situasi
+      // Dinamakan arrow function karena menggunakan tanda "=>" (seperti anak panah)
+      /* Berikut kekurangan dari arrow function
+        - tidak memiliki fitur arguments object
+        - tidak bisa menggunakan function generator
+        - tidak bisa mengakses this(ada dipembahasan di function di object)
+        - tidak bisa mengakses super(ada dipembahasan di JavaScript OOP)
+      */
+
+      // ARROW FUNCTION DENGAN BLOCK (Ada kurung kurawal)
+      const sayHello = (name) => {
+        document.writeln(`<p>Halo ${name}</p>`);
+      };
+
+      // Pemanggilan function
+      sayHello("Hadi");
+
+      // ARROW FUNCTION TANPA BLOCK
+      // Syaratnya : Harus satu baris (sederhana)
+      const sayName = (name) => document.writeln(`<p>Namaku ${name}</p>`);
+      sayName("Putra");
+
+      // ARROW FUNCTION RETURN VALUE
+      // Arrow funciton bisa mengembalikan value, sama seperti function biasanya
+      // Jika menggunakan block (pakai kurung kurawal), maka kita perlu menggunakan kata kunci "return"
+      // Jika tidak menggunakan block, maka kita tidak perlu menggunakan kata kunci "return"
+
+      /* const sum = (first, second) => {
+        return first + second;
+      }; */
+
+      const sum = (first, second) => first + second;
+
+      document.writeln(`<p>${sum(100, 10)}</p>`);
+
+      // ARROW FUNCTION TANPA KURUNG PARAMETER
+      // Jika parameter di arrow function hanya satu, kita bisa tidak menggunakan kurung pada parameter
+      /*  const sayCall = name => document.writeln(`<p>Namaku ${name}</p>`);
+      sayCall("Tri"); */
+
+      // ARROW FUNCTION SEBAGAI PARAMETER
+      // Karena arrow function sama seperti anonymous function
+      // Jadi kita juga bisa menggunakan arrow function sebagai parameter di function lain
+
+      function giveMeName(callback) {
+        callback("hadi");
+      }
+
+      giveMeName((name) => document.writeln(`<b>Ini adalah ${name}</b>`));
+    </script>
+  </body>
+</html>
